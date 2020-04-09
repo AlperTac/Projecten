@@ -1,0 +1,79 @@
+<div id="invoice" class="compact page-layout blank" fxLayout="row">
+
+    <div class="invoice-container">
+
+        <!-- INVOICE -->
+        <div class="card">
+            <div class="content">
+                <table class="simple invoice-table">
+                    <thead>
+                    <tr>
+                        <th>Site</th>
+                        <th>Waarschuwing</th>
+                        <th class="text-right">Type</th>
+                        <th class="text-right">Risico code</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr *ngFor="let service of invoice.services">
+                        <td>
+                            <a href="/pages\invoices\table">{{service.alert}}</a>
+                        </td>
+                        <td>
+                            {{service.host}}
+                        </td>
+                        <td class="text-right">
+                            {{service.riskdesc}}
+                        </td>
+                        <td class="text-right">
+                            {{service.riskcode}}
+                        </td>
+                    </tr>
+
+
+                    </tbody>
+                </table>
+
+
+            </div>
+
+            <!--
+
+            Use the following elements to add breaks to your pages. This will make sure that the section in between
+            these elements will be printed on a new page. The following two elements must be used before and after the
+            page content that you want to show as a new page. So, you have to wrap your content with them.
+
+            Elements:
+            ---------
+            <div class="page-break-after"></div>
+            <div class="page-break-before"></div>
+
+            -->
+
+            <!--
+
+            Example:
+            --------
+
+            Initial page content!
+
+            <div class="page-break-after"></div>
+            <div class="page-break-before"></div>
+
+            This is the second page!
+
+            <div class="page-break-after"></div>
+            <div class="page-break-before"></div>
+
+            This is the third page!
+
+            <div class="page-break-after"></div>
+            <div class="page-break-before"></div>
+
+            -->
+
+        </div>
+        <!-- / INVOICE -->
+
+    </div>
+</div>
